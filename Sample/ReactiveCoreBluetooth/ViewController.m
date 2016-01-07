@@ -112,7 +112,7 @@
         CBPeripheral* peripheral = [self.blueToothDevices objectAtIndex:indexPath.row];
     
         cell.textLabel.text = peripheral.name;
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", peripheral.isConnected ? @"Connected" : @""];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", peripheral.state == CBPeripheralStateConnected ? @"Connected" : @""];
     }
     return cell;
 }

@@ -124,7 +124,7 @@
         for (CacheObject* obj in self.availableDevices)
         {
             CBPeripheral* p = (CBPeripheral*)obj.object;
-            if (p.isConnected)
+            if (p.state == CBPeripheralStateConnected)
             {
                 [devicesToKeep addObject:obj];
             }
@@ -168,7 +168,7 @@
     for (CacheObject *obj in array)
     {
         CBPeripheral* p = (CBPeripheral*)obj.object;
-        if (p.UUID == peripheral.UUID)
+        if ([p.identifier.UUIDString isEqualToString:peripheral.identifier.UUIDString])
         {
             return obj;
         }

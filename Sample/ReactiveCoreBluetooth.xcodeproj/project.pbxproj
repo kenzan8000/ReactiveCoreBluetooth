@@ -33,6 +33,7 @@
 		633DDB1317A0769E00B5C077 /* ReactiveCoreBluetooth.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReactiveCoreBluetooth.podspec; path = ../ReactiveCoreBluetooth.podspec; sourceTree = "<group>"; };
 		633DDB1417A0769E00B5C077 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		633DDB1717A07C3200B5C077 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6DD7C48643752CA9EB94ACBB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8148F970179EF6F9005A414E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		8148F98517A02184005A414E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ReactiveCoreBluetooth/ViewController.h; sourceTree = SOURCE_ROOT; };
 		8148F98617A02184005A414E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ReactiveCoreBluetooth/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -57,7 +58,7 @@
 		81F90514179EF5A600E90276 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		81F90516179EF5A600E90276 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81F90518179EF5A600E90276 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FCFEF8C442014C7F82E8EC0D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		AFCF20B7270AB57447CCBDBC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05424B9CA9E2DF36198919A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFCF20B7270AB57447CCBDBC /* Pods.debug.xcconfig */,
+				6DD7C48643752CA9EB94ACBB /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		819002FC187705D800350A0A /* ReactiveCoreBluetooth */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +111,7 @@
 				633DDB1317A0769E00B5C077 /* ReactiveCoreBluetooth.podspec */,
 				633DDB1417A0769E00B5C077 /* README.md */,
 				633DDB1717A07C3200B5C077 /* LICENSE */,
-				FCFEF8C442014C7F82E8EC0D /* Pods.xcconfig */,
+				05424B9CA9E2DF36198919A1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +175,7 @@
 				81F9050E179EF5A600E90276 /* Frameworks */,
 				81F9050F179EF5A600E90276 /* Resources */,
 				A5E922AE3AA346AE85348924 /* Copy Pods Resources */,
+				E793E015B8B6004FF4F74B4A /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,7 +192,7 @@
 		81F90509179EF5A600E90276 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Citrrus, LLC";
 			};
 			buildConfigurationList = 81F9050C179EF5A600E90276 /* Build configuration list for PBXProject "ReactiveCoreBluetooth" */;
@@ -247,7 +258,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E793E015B8B6004FF4F74B4A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -302,6 +328,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -349,11 +376,12 @@
 		};
 		81F90535179EF5A700E90276 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCFEF8C442014C7F82E8EC0D /* Pods.xcconfig */;
+			baseConfigurationReference = AFCF20B7270AB57447CCBDBC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReactiveCoreBluetooth/ReactiveCoreBluetooth-Prefix.pch";
 				INFOPLIST_FILE = "ReactiveCoreBluetooth/ReactiveCoreBluetooth-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.citrrus.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ReactiveCoreBluetooth;
 				WRAPPER_EXTENSION = app;
 			};
@@ -361,11 +389,12 @@
 		};
 		81F90536179EF5A700E90276 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCFEF8C442014C7F82E8EC0D /* Pods.xcconfig */;
+			baseConfigurationReference = 6DD7C48643752CA9EB94ACBB /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReactiveCoreBluetooth/ReactiveCoreBluetooth-Prefix.pch";
 				INFOPLIST_FILE = "ReactiveCoreBluetooth/ReactiveCoreBluetooth-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.citrrus.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ReactiveCoreBluetooth;
 				WRAPPER_EXTENSION = app;
 			};
